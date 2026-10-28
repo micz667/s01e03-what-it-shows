@@ -1,0 +1,19 @@
+---
+layout: runbook
+title: 'Two causes inside #4471'
+owner: Maciej Urbanski
+status: open
+reviewed: 2026-10-28
+signature: Maciej Urbanski
+---
+
+<script>
+  import CauseTable from '#lib/kb/CauseTable.svelte';
+  import RenderStamp from '#lib/kb/RenderStamp.svelte';
+</script>
+
+#4471 was marked known as one date bug. The table below is built from the reports at render time. The cause with the most reports is the ticket. Any other cause was merged into the wrong place and has no ticket of its own.
+
+<CauseTable ticket={4471} />
+
+<RenderStamp {signature} />
