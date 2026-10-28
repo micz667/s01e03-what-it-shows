@@ -4,7 +4,7 @@ title: 'Two causes inside #4471'
 owner: Maciej Urbanski
 status: open
 reviewed: 2026-10-28
-signature: Maciej Urbanski
+signature: v1.eyJzdG9yeSI6Im9mZiIsInN1YiI6IjEyOTgiLCJhdWQiOiJjaGFsbGVuZ2U6d2hhdC1pdC1zaG93cyIsImlhdCI6MTc5MzE4MDE3MSwiZXhwIjoxNzkzMjY2NTcxfQ.r5UnmROMDaXf7LB2foP_jAT1sCBpCJYRuN8mjb7whT0
 ---
 
 <script>
@@ -13,6 +13,9 @@ signature: Maciej Urbanski
 </script>
 
 #4471 was marked known as one date bug. The table below is built from the reports at render time. The cause with the most reports is the ticket. Any other cause was merged into the wrong place and has no ticket of its own.
+
+- `parser` ([issue #1](https://github.com/micz667/s01e03-what-it-shows/issues/1)): the shared parser reads every date month first, so day-first tenants get flipped dates across the app, email, and `booking-v2`.
+- `hint` ([issue #2](https://github.com/micz667/s01e03-what-it-shows/issues/2)): `booking-v3` prints `MM/DD/YYYY` under the date field for day-first tenants whose form reads the day first.
 
 <CauseTable ticket={4471} />
 
